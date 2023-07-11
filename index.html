@@ -1,0 +1,680 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>简历 Curriculum vitae</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="bf9b944d-7442-4dc4-8420-2833b09eadc4" class="page sans"><header><h1 class="page-title">简历 Curriculum vitae</h1><p class="page-description"></p></header><div class="page-body"><h1 id="8eac53fa-d565-4179-a5c2-397abe4c30c4" class="">Basic information </h1><ul id="94e6264e-78ea-4d8c-9d54-06626a2f3018" class="bulleted-list"><li style="list-style-type:disc">Name: Zihang Ye</li></ul><ul id="8886c346-6694-4a25-b8d2-5758589a58f9" class="bulleted-list"><li style="list-style-type:disc">Undergraduate College: Zhejiang University</li></ul><ul id="4ffe2ef8-1414-460a-a817-ecb618bb2996" class="bulleted-list"><li style="list-style-type:disc">Department: College of agriculture and biotechnology</li></ul><ul id="40d4ce3a-4228-4091-8bcb-fd4b1dfb3f2c" class="bulleted-list"><li style="list-style-type:disc">Major: Horticulture</li></ul><ul id="97e3efe0-bff9-429c-9b1f-571872780078" class="bulleted-list"><li style="list-style-type:disc">GPA: 3.93/4</li></ul><h1 id="8f5fbf82-94db-4d8f-8a0a-57914bb833b2" class="">Relevant course grases</h1><table id="ed62f541-bfc7-468a-bcc9-2bf510fa3de2" class="simple-table"><tbody><tr id="9a74c7fc-7659-4ffb-abe8-f454a51c7969"><td id="I=cQ" class="">Revelant course</td><td id="InFR" class="">grades</td></tr><tr id="e1c32130-374a-401d-a645-0a51df299de2"><td id="I=cQ" class="">Molecular Biology</td><td id="InFR" class="">92</td></tr><tr id="fa1fb8e2-6bbd-48e8-8379-eb790e493e52"><td id="I=cQ" class="">Molecular Biology Experiments</td><td id="InFR" class="">90</td></tr><tr id="2b7810b4-c7fa-4531-9658-42d4462abbf6"><td id="I=cQ" class="">Cell Biology</td><td id="InFR" class="">90</td></tr><tr id="5f9a00db-d45d-45d7-8590-566c14f20f7e"><td id="I=cQ" class="">Biochemistry</td><td id="InFR" class="">94</td></tr><tr id="8e08cdb0-b9d9-4e0c-a32e-a8ff97fdc267"><td id="I=cQ" class="">Engineering Biology</td><td id="InFR" class="">93</td></tr><tr id="712078a7-0ea4-441f-84e0-32d63c408bd3"><td id="I=cQ" class="">Immunology</td><td id="InFR" class="">90</td></tr></tbody></table><h1 id="3931e141-09ce-4ed4-a3bc-bf12db28e262" class="">Award during undergraduate study</h1><h2 id="c03aae16-9303-46d7-977d-03960e0d19bd" class="">Scholarship</h2><ul id="dcaff757-3ff8-41e7-9adb-2706b828dde6" class="bulleted-list"><li style="list-style-type:disc">20-21 Zhejiang university scholarship-second prize</li></ul><ul id="a568363b-cc75-4ddf-9057-fb937e105786" class="bulleted-list"><li style="list-style-type:disc">20-21 Scholarship for Excellence in Special Major</li></ul><ul id="98ad1af4-93bd-4415-a0fc-aa1789df3724" class="bulleted-list"><li style="list-style-type:disc">21-22 Zhejiang university scholarship-third prize</li></ul><ul id="86400791-4f5c-4eee-8052-1e80f0fae6c0" class="bulleted-list"><li style="list-style-type:disc">21-22 Scholarship for Excellence in Special Major</li></ul><h2 id="898b65a8-8d40-4d98-94dc-a5a1b7d9e571" class="">Honorary Award</h2><ul id="f59f8e0f-ad79-411c-81e0-42231b2705ec" class="bulleted-list"><li style="list-style-type:disc">20-21 Outstanding Student</li></ul><ul id="039d3eba-2f83-45ab-ab16-2dc7e029053e" class="bulleted-list"><li style="list-style-type:disc">20-21 Elite League Cadres of Zhejiang university</li></ul><ul id="f9cd41c5-246f-4805-84c8-bd2ccb001924" class="bulleted-list"><li style="list-style-type:disc">21-22 Outstanding Student</li></ul><ul id="95e553e2-678c-4d5e-8a0f-ff8bc8b4b179" class="bulleted-list"><li style="list-style-type:disc">21-22 Elite League Cadres of CAB</li></ul><h2 id="f7693e30-7e69-456b-98c9-51f653d2f29b" class="">Competition Awards</h2><ul id="1a506aac-a416-4aed-9e36-1a084a39fcb2" class="bulleted-list"><li style="list-style-type:disc">2022 iGEM International Gold Medal and four nomination awards</li></ul><ul id="c77361aa-01b8-484b-95da-d1652cdda081" class="bulleted-list"><li style="list-style-type:disc">2022 The third prize of the CULSC</li></ul><p id="bf7d46e3-9144-468b-b947-1ab4df20c3d3" class="">
+</p><h1 id="8fbbfc25-252e-4484-a592-2e70e8c173de" class="">Research Experience</h1><h2 id="17c0b969-cca6-4b6b-b4ae-567d1517a78b" class="">1. Restoration of stone cultural relics by MICP</h2><p id="609d9b76-c39d-4198-aa06-d033078fb9f1" class="">This project is my iGEM competition project. In this project, we applied the idea of synthetic biology to solve the problems caused by <strong>tiny cracks </strong>in stone relics. We make the engineering modification of Bacillus subtilis, so that Bacillus subtilis can mediate the formation of calcium carbonate to repair cracks in stone relics. We hope that this biological idea can provide a new method for the cultural relics protection.</p><p id="a8f25152-024f-4f0e-9ea7-cea1e88da6ee" class="">We want to  provide new methods for repairing tiny cracks in stone artifacts that are not yet covered by a solution. To achieve this goal, we have designed a total of four modules. </p><ol type="1" id="7e14fd57-1faf-4694-955b-973e7d8701df" class="numbered-list" start="1"><li><strong>Calcium Carbonate Production module</strong>: We designed the filler material using <strong>Microbial Induced Calcite Precipitation(MICP)</strong>. We introduce the carbonic anhydrase to enhance the ability of bacteria to produce HCO3-（CO32-), and the <strong>Amorphous calcium carbonate binding protein(ACCBP) </strong>to accelerate the precipitation rate of calcium carbonate.</li></ol><ol type="1" id="85a20609-a4c7-4335-bfc9-7babee962a46" class="numbered-list" start="2"><li><strong>Biological scaffold Module</strong>: We design a biological scaffold system based on EutM, Spycatcher-SpyTag, and the flagella of <em>Bacillus subtilis </em>to provide the attaching surface for sediments, achieving better structure and strength of mineralization products.</li></ol><ol type="1" id="dfceb30a-3a36-4f10-8bc1-3fa80f47b9a8" class="numbered-list" start="3"><li><strong>Quorum Sensing Module</strong>: We take advantage of oxygen-limitation induced promotor and use subtilisin as sensing molecular. The former enables our chassis to get into the depth of the cracks and express the material then, while the latter could also work as an antibiotic to inhibit the growth of contaminated bacteria.</li></ol><ol type="1" id="8cc1672e-01bd-4fe3-b513-bd5f63ea76a5" class="numbered-list" start="4"><li><strong>Biosafety Module</strong>: We introduce a sucrose-induced promoter PsacB and the conservative toxin protein MazE/F to achieve regulating the death of cell, which makes sure the safety of our project.</li></ol><p id="b866e5c3-ba3d-4e37-9004-fb4e19f52d7d" class="">The second part is the work that I am mainly responsible for designing and carrying out. In this web(<a href="https://2022.igem.wiki/zju-china/index.html">Home | ZJU-China - iGEM 2022</a>), there are more information of this project.</p><p id="ea071481-9627-4420-b482-ca3289ac7dc4" class="">
+</p><h2 id="ef63b565-1ab5-41f1-a045-b1d385369f60" class="">2. Hofmeister Effect on GelMA for Orthopedic Disorders</h2><p id="e2b312e5-708f-4325-aecf-644a55e2eddd" class="">In this research experience, I tried to use the methods of tissue engineering and stem cell therapy , to come up with innovative treatments for some diseases.</p><p id="168e21c0-2468-49a1-afc4-36e8ce5c0680" class="">Hofmeister effect is a well-known physicochemical effect, which is an empirical summary of the solubility/denaturation ability of ions to proteins. </p><p id="d2f95a0e-f66d-467f-b6ed-6e906eb385b8" class="">We found that applying Hofmeister effect to protein hydrogels can effectively and easily change their mechanical strength. We hope to use this effect to modify GelMA to simulate the mechanical strength of different tissues, and in combination with other means(including the echanical strength of medium) to regulate the proliferation and differentiation of MSCs.</p><p id="98a0ac88-54db-4469-b04f-b66248011ad9" class="">For example, we hope to increase the mechanical strength of GelMA to approximate the mechanical strength of bone, and add osteogenic inducible peptides to induce MSCs differentiation in an attempt to achieve bone fracture or defect repair.</p><p id="1ebfb1ed-2e39-46c7-88c2-1784c9a2c906" class="">More information can be find in this PDF.</p><p id="e8160589-3b41-47f5-91d0-92933f869f26" class="">
+</p><h2 id="02844955-9caa-46dd-af67-5415a5e8afb4" class="">3. Design of MSCs for the synthesis of IL-1Ra by mechanical force</h2><p id="f900281d-3763-4793-ad79-cd77a539c8d7" class="">This is an idea that has not been implemented. This project was designed by myself, based on the last project. </p><p id="308ab141-75b8-41b0-87ac-af5a7320a069" class="">In the initial vision of the last hydrogel project, we wanted to create an engineered cartilage to treat osteoarthritis.   We note that in osteoarthritis, abnormal mechanical forces are closely related to the inflammation of cartilage and synovium. We attempted to design a genetic circuit that responds to mechanical forces, basing on the Piezo and TRPV4 proteins that have been shown to act as mechanoreceptors. And with this molecular switch, we hope to control the synthesis and release of IL-1Ra or sTNFR, which have been utilized in clinical practice, in the cell growing in the hydrogel. We hope to achieve the ability to control the release of small molecule drugs under specific conditions to relieve inflammation.</p><p id="84b9ff4e-95fa-41ec-962b-695aa0534671" class="">Through transcriptome analysis and database search, we identified several pathways that correlate inflammation and mechanical forces and identified specific transcriptional activation motifs downstream.</p><ul id="eb2a73f1-0eec-465c-a952-07d29d717565" class="bulleted-list"><li style="list-style-type:disc">AP-1: TGA(C/G)TCA</li></ul><ul id="8da9dcc7-2d1d-481b-805d-3fb6c26dbc20" class="bulleted-list"><li style="list-style-type:disc">NF-κB: GGRNYYYCC R: A/G Y:C/T</li></ul><p id="04d93876-88d7-462a-96f5-50fe8da74ec0" class="">In addition, we added a negative control element of NF-κB to control the background expression. We also hope to regulate expression levels with the strength of RBS and the strength of the core promoter.</p><ul id="8d717e10-56ff-4c1c-9b70-0e0072b75915" class="bulleted-list"><li style="list-style-type:disc">NRE: AATTCCTCTGA</li></ul><p id="26bfe96c-e2e1-409b-9264-0e8395e55c08" class="">More information can be find in this PDF</p><p id="467bff12-39a4-4f7b-a639-0d1afd49f8d6" class="">
+</p></div></article></body></html>
